@@ -1,0 +1,194 @@
+//import java.util.Calendar;
+//import java.util.GregorianCalendar;
+//import java.util.Random;
+
+//    boolean prevent[] = {false,false,false,false};
+
+//    Calendar calendar = new GregorianCalendar();
+
+
+
+boolean tempPrevent[] = {false,false,false,false};
+
+//    int misses =0;    
+    /*////////////////////////////////////////////////////////////wrong in this case!!
+    {"1","2","3"},
+        {"7","4","6"},
+        {"5","_","8"},
+    */
+    /* wrong but i try to ignore that by make if before if
+    {"4","1","_"},          
+        {"7","5","2"},
+        {"8","6","3"},
+    */
+    /*///////////////////////////////////////////////////////wrong!
+    {"4","_","1"},          
+        {"7","5","2"},
+        {"8","6","3"},
+    */
+    /*//////////////////////////////////////////////////////wrong!
+    {"4", "1", "3"},
+        {"2","_","6"},
+        {"7","5","8"},
+    */
+    /*favorite
+    {"4", "1", "3"},
+        {"7","2","6"},
+        {"_","5","8"},
+    */
+    /*favotrite
+    {"4","1","_"},          
+        {"7","5","2"},
+        {"8","6","3"},
+    */
+    /*
+    {"1", "2", "3"},
+        {"5","_","6"},
+        {"4","7","8"},
+    */
+
+
+
+//panel1.setSize(1000, 600);
+
+
+//                if(starMatrixs[2][2]==goalMatrix[2][2])
+//                       System.out.println("starMatrixs[2][2]=goalMatrix[2][2]");wrong becaus it printed it
+ 
+
+//            prevent[0] = false;
+//            prevent[1] = true;
+//            prevent[2] = false;
+//            prevent[3] = false;
+
+
+//            prevent[0] = false;
+//            prevent[1] = false;
+//            prevent[2] = true;
+//            prevent[3] = false;
+
+
+
+
+//            prevent[0] = true;
+//            prevent[1] = false;
+//            prevent[2] = false;
+//            prevent[3] = false;
+ 
+
+//            prevent[0] = false;
+//            prevent[1] = false;
+//            prevent[2] = false;
+//            prevent[3] = true;
+ 
+
+//        else {
+//            
+//            int minDirection = min(upMisses,downMisses,leftMisses,rightMisses);
+//            
+//            int xr = random();
+//            System.out.println("the random = "+xr);
+//            
+//            if (xr == 0&&upMisses<10&&prevent[0]!=true&&upMisses==minDirection) { //up
+//                String temp = startMatrix[xyOf_[0]][xyOf_[1]];
+//                startMatrix[xyOf_[0]][xyOf_[1]] = startMatrix[xyOf_[0]-1][xyOf_[1]];
+//                startMatrix[xyOf_[0]-1][xyOf_[1]] = temp;
+//            }
+//            else if (xr == 1&&downMisses<10&&prevent[1]!=true&&downMisses==minDirection) { //down
+//                String temp = startMatrix[xyOf_[0]][xyOf_[1]];
+//                startMatrix[xyOf_[0]][xyOf_[1]] = startMatrix[xyOf_[0]+1][xyOf_[1]];
+//                startMatrix[xyOf_[0]+1][xyOf_[1]] = temp;
+//            }
+//            else if (xr == 2&&leftMisses<10&&prevent[2]!=true&&leftMisses==minDirection) { //left
+//                String temp = startMatrix[xyOf_[0]][xyOf_[1]];
+//                startMatrix[xyOf_[0]][xyOf_[1]] = startMatrix[xyOf_[0]][xyOf_[1]-1];
+//                startMatrix[xyOf_[0]][xyOf_[1]-1] = temp;
+//            }
+//            else if (xr == 3&&rightMisses<10&&prevent[3]!=true&&rightMisses==minDirection) { //right
+//                
+//                String temp = startMatrix[xyOf_[0]][xyOf_[1]];
+//                startMatrix[xyOf_[0]][xyOf_[1]] = startMatrix[xyOf_[0]][xyOf_[1]+1];
+//                startMatrix[xyOf_[0]][xyOf_[1]+1] = temp;
+//            }
+//            
+//        }
+
+
+//    protected int min(int upmisses,int downmisses,int leftmisses,int rightmisses){
+//        int minDirection = Math.min(upmisses, downmisses);
+//        minDirection = Math.min(minDirection, leftmisses);
+//        minDirection = Math.min(minDirection, rightmisses);
+//        return minDirection;    
+//    }
+    
+//    protected int random(){
+//        Random r = new Random(calendar.get(Calendar.SECOND));
+//        int xr = r.nextInt(5);
+//        while(xr == 4||xr == 5){
+//            xr = r.nextInt(5);
+//        }
+//        return xr;            
+//    }
+
+//while(find_misses(startMatrix)!=0)//if i want to do this by first press on putton
+
+
+
+
+
+//        if(xyNdxOf_[0] == 0&&xyNdxOf_[1] == 0){
+//            direction[1] = true;
+//            direction[3] = true;            
+//        }
+//        else if(xyNdxOf_[0] == 0&&xyNdxOf_[1] == 1){
+//            direction[1] = true;
+//            direction[3] = true;
+//            direction[2] = true;
+//        }
+//        else if(xyNdxOf_[0] == 0&&xyNdxOf_[1] == 2){
+//            direction[1] = true;
+//            direction[2] = true;
+//        }
+//        else if(xyNdxOf_[0] == 1&&xyNdxOf_[1] == 0){
+//            direction[0] = true;
+//            direction[1] = true;
+//            direction[3] = true;
+//        }
+//        else if(xyNdxOf_[0] == 1&&xyNdxOf_[1] == 1){
+//            direction[0] = true;
+//            direction[1] = true;
+//            direction[3] = true;
+//            direction[2] = true;
+//        }
+//        else if(xyNdxOf_[0] == 1&&xyNdxOf_[1] == 2){
+//            direction[0] = true;
+//            direction[1] = true;
+//            direction[2] = true;
+//        }
+//        else if(xyNdxOf_[0] == 2&&xyNdxOf_[1] == 0){
+//            direction[0] = true; 
+//            direction[3] = true;
+//        }
+//        else if(xyNdxOf_[0] == 2&&xyNdxOf_[1] == 1){
+//            direction[0] = true;
+//            direction[2] = true;
+//            direction[3] = true;
+//        }
+//        else if(xyNdxOf_[0] == 2&&xyNdxOf_[1] == 2){
+//            direction[0] = true;
+//            direction[2] = true;
+//        }
+        //System.out.println("up = "+direction[0]+" ,down = "+direction[1]+" ,left = "+direction[2]+" ,right="+direction[3]);
+
+
+//System.out.println("up = "+direction[0]+" ,down = "+direction[1]+" ,left = "+direction[2]+" ,right="+direction[3]);
+
+
+
+
+
+الاسم : جرجس صلاح مرجان TASK 1
+
+
+الكود : 61900081جروب : 3
+
